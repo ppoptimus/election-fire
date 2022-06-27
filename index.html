@@ -1,29 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ระบบลงทะเบียนเลือกตั้ง</title>
 
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>ระบบลงทะเบียนเลือกตั้ง</title>
+   <link href="img/logo.png" rel="icon" />
+   <link href="css/main.css" rel="stylesheet" />
    <link href="css/bootstrap.min.css" rel="stylesheet" />
+   <link href="css/all.min.css" rel="stylesheet" />
 </head>
+
 <body>
-   <div class="container">
-      <div class="card text-white bg-primary mb-3">
-         <div class="card-header">Header</div>
-         <div class="card-body">
-            <div class="mb-3">
-               <label for="exampleFormControlInput1" class="form-label">Email address</label>
-               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-             </div>
-             <div class="mb-3">
-               <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-             </div>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+            <img src="img/logo.png" class="img-fluid" width="40" />
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+                                                                                                                                                                                                       aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+               <li class="nav-item dropdown">
+                  <a class="text-white nav-link dropdown-toggle fs-5" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ลงทะเบียน</a>
+                  <div class="dropdown-menu p-2">
+                     <a class="dropdown-item m-2 fs-5" href="#">ผู้สมัครรับเลือกตั้งตัวแทนนายจ้าง</a>
+                     <a class="dropdown-item m-2 fs-5" href="#">ผู้สมัครรับเลือกตั้งตัวแทนลูกจ้าง</a>
+                     <a class="dropdown-item m-2 fs-5" href="#">ใช้สิทธิเลือกตั้งตัวแทนนายจ้าง</a>
+                     <a class="dropdown-item m-2 fs-5" href="#">ใช้สิทธิเลือกตั้งตัวแทนลูกจ้าง</a>
+                  </div>
+               </li>
+               <li class="nav-item ms-2">
+                  <a class="text-white nav-link fs-5" href="#">รายงาน </a>
+               </li>
+            </ul>
+            <div class="dropdown">
+               <button class="btn btn-secondary rounded-circle" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-user"></i>
+               </button>
+               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile" style="width: max-content">
+                  <li class="px-4 py-2">ชื่อ <strong>นิราช น้อยศรี</strong></li>
+                  <li class="px-4 py-2">บัตรประชาชน <strong>3001122445568</strong></li>
+                  <li class="px-4 py-2">ตำแหน่ง <strong>เจ้าหน้าที่</strong></li>
+                  <li>
+                     <hr class="dropdown-divider" />
+                  </li>
+                  <li class="text-center p-1">
+                     <button class="btn btn-danger">ออกจากระบบ</button>
+                  </li>
+               </ul>
+            </div>
          </div>
-       </div>
-      
+      </div>
+   </nav>
+   <div class="container d-flex justify-content-center flex-column my-3">
+      <form class="row g-3 mb-3">
+         <div class="col-auto">
+            <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input type="text" class="form-control form-control-lg" id="inputPassword2" placeholder="เลขทะเบียนนายจ้าง">
+         </div>
+         <div class="col-auto">
+            <button type="submit" class="btn btn-lg btn-dark "><i class="fas fa-search"></i> ค้นหา</button>
+         </div>
+      </form>
+      <div class="card mb-3 w-100">
+         <div class="card-header text-white bg-primary h5">กรอกข้อมูลผู้ลงสมัครรับเลือกตั้งตัวแทนนายจ้าง</div>
+         <div class="card-body">
+            <div class="mb-3 row">
+               <label for="companyname" class="col-sm-2 col-form-label form-control-lg">ชื่อบริษัท</label>
+               <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-lg" id="companyname">
+               </div>
+            </div>
+            <div class="mb-3 row">
+               <label for="firstname" class="col-sm-2 col-form-label form-control-lg">ชื่อ</label>
+               <div class="col-sm-4">
+                  <input type="text" class="form-control form-control-lg" id="firstname">
+               </div>
+               <label for="lastname" class="col-sm-2 col-form-label form-control-lg">นามสกุล</label>
+               <div class="col-sm-4">
+                  <input type="text" class="form-control form-control-lg" id="lastname">
+               </div>
+            </div>
+            <div class="mb-3 row">
+               <label for="firstname" class="col-sm-2 col-form-label form-control-lg">เลขบัตรประชาชน</label>
+               <div class="col-sm-4">
+                  <input type="text" class="form-control form-control-lg" id="firstname">
+               </div>
+               
+            </div>
+            <div class="mb-3 row">
+               <fieldset class="form-group form-control-lg">
+                  <legend class="mt-4">เอกสารที่ใช้ในการสมัคร</legend>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="personalcopy">
+                    <label class="form-check-label" for="personalcopy">
+                      สำเนาบัตรประชาชน <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="houseregis">
+                    <label class="form-check-label" for="houseregis">
+                      สำเนาทะเบียนบ้าน <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="medical">
+                     <label class="form-check-label" for="medical">
+                       ใบรับรองแพทย์ <span class="text-danger">*</span>
+                     </label>
+                   </div>
+                   <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="photo">
+                     <label class="form-check-label" for="photo">
+                       รูปถ่าย <span class="text-danger">*</span>
+                     </label>
+                   </div>
+                   <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="certificate">
+                     <label class="form-check-label" for="certificate">
+                       หนังสือรับรองนิติบุคคล
+                     </label>
+                   </div>
+                   <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="authorized">
+                     <label class="form-check-label" for="authorized">
+                       หนังสือมอบอำนาจ
+                     </label>
+                   </div>
+                </fieldset>
+               </div>
+            </div>
+         </div>
+         <div class="mb-1 d-flex justify-content-center ">
+           <button class="btn btn-info m-1 p-2 w-25">บันทึก</button>
+           <button class="btn btn-danger m-1 p-2 w-25">ยกเลิก</button>
+         </div>
    </div>
+   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
